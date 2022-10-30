@@ -1,6 +1,4 @@
 import {
-    Grid,
-    GridItem,
     Heading,
     Stack,
     Text,
@@ -9,9 +7,7 @@ import {
     Box,
     Button,
     Flex,
-    Wrap,
     InputGroup,
-    InputLeftAddon,
     FormLabel,
 } from "@chakra-ui/react";
 

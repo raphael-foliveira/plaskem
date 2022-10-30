@@ -1,4 +1,4 @@
-import { Heading, Grid, GridItem, Flex, Button, Box } from "@chakra-ui/react";
+import { Heading, Flex, Button, Box } from "@chakra-ui/react";
 import { Extruder, Lines } from "../UI/Assets";
 
 export default function Bottom() {

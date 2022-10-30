@@ -1,4 +1,4 @@
-import { Box, Flex, SimpleGrid, Text } from "@chakra-ui/react";
+import { Flex, Text } from "@chakra-ui/react";
 import { ReactNode } from "react";
 import { Star } from "../UI/Assets";
 

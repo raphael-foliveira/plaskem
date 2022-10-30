@@ -1,4 +1,4 @@
-import { Heading, Button, Flex, SimpleGrid, Box } from "@chakra-ui/react";
+import { Heading, Button, Flex, Box } from "@chakra-ui/react";
 import { SquigglyLine } from "../UI/Assets";
 import { Fruits } from "../UI/Assets";
 import styled from "@emotion/styled";
