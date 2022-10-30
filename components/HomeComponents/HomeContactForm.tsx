@@ -25,7 +25,7 @@ export default function HomeContactForm() {
             </Stack> */}
             <Stack
                 textAlign={"end"}
-                width={{ base: "100%", lg: "75%" }}
+                width={{ base: "100%", lg: "67%" }}
                 gap={3}
                 padding="1.5em"
                 // justifyContent="space-between"
