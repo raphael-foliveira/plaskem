@@ -1,4 +1,10 @@
-import { extendTheme, defineStyleConfig, defineStyle } from "@chakra-ui/react";
+import {
+    extendTheme,
+    defineStyleConfig,
+    defineStyle,
+    createMultiStyleConfigHelpers,
+} from "@chakra-ui/react";
+import { inputAnatomy } from "@chakra-ui/anatomy";
 
 const colors = {
     pkmGreen: {
@@ -38,24 +44,11 @@ const headingTheme = defineStyleConfig({
     },
 });
 
-const pkmDefaultInput = defineStyle({
-    borderColor: "pkmGreen.900",
-});
-
-const inputTheme = defineStyleConfig({
-    variants: {
-        pkmDefaultInput: pkmDefaultInput,
-    },
-    defaultProps: {
-        variant: "pkmDefaultInput",
-    },
-});
-
 const pkmDefaultTextArea = defineStyle({
-    borderColor: "pkmGreen.900",
+    outlineColor: "pkmGreen.900",
 });
 
-const textAreaTheme = defineStyle({
+const textareaTheme = defineStyleConfig({
     variants: {
         pkmDefaultTextArea: pkmDefaultTextArea,
     },
@@ -64,13 +57,32 @@ const textAreaTheme = defineStyle({
     },
 });
 
+const { definePartsStyle, defineMultiStyleConfig } = createMultiStyleConfigHelpers(
+    inputAnatomy.keys
+);
+
+const pkmDefaultInput = definePartsStyle({
+    field: {
+        outlineColor: "pkmGreen.900",
+    },
+});
+
+const inputTheme = defineMultiStyleConfig({
+    variants: {
+        pkmDefaultInput: pkmDefaultInput
+    },
+    defaultProps: {
+        variant: "pkmDefaultInput", 
+    },
+});
+
 const theme = extendTheme({
     colors,
     components: {
         Button: buttonTheme,
-        Heading: headingTheme,
         Input: inputTheme,
-        TextArea: textAreaTheme,
+        Heading: headingTheme,
+        Textarea: textareaTheme,
     },
 });
 
