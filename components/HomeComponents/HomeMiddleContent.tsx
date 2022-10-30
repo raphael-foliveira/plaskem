@@ -1,7 +1,7 @@
 import { Heading, Flex, Button, Box } from "@chakra-ui/react";
 import { Extruder, Lines } from "../UI/Assets";
 
-export default function Bottom() {
+export default function HomeMiddleContent() {
     return (
         <Flex marginTop="5em" wrap={"wrap"}>
             <Box width={{base: "100%", lg: "50%"}} padding={{base: "", lg:"0 0 0 5em"}}>

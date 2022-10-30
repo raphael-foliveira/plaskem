@@ -69,11 +69,30 @@ const pkmDefaultInput = definePartsStyle({
 
 const inputTheme = defineMultiStyleConfig({
     variants: {
-        pkmDefaultInput: pkmDefaultInput
+        pkmDefaultInput: pkmDefaultInput,
     },
     defaultProps: {
-        variant: "pkmDefaultInput", 
+        variant: "pkmDefaultInput",
     },
+});
+
+const pkmGreenLink = defineStyle({
+    color: "pkmGreen.400",
+});
+
+const pkmDefaultLink = defineStyle({
+    color: "pkmBlack.400"
+})
+
+const linkTheme = defineStyleConfig({
+    variants: {
+        pkmGreenLink: pkmGreenLink,
+        pkmDefaultLink: pkmDefaultLink
+    },
+    defaultProps: {
+        variant: "pkmDefaultLink"
+    }
+
 });
 
 const theme = extendTheme({
@@ -83,6 +102,7 @@ const theme = extendTheme({
         Input: inputTheme,
         Heading: headingTheme,
         Textarea: textareaTheme,
+        Link: linkTheme,
     },
 });
 

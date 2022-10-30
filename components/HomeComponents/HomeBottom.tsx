@@ -1,9 +1,9 @@
 import { Box, Flex, Text } from "@chakra-ui/react";
 import { PlaskemLogo } from "../UI/Assets";
 
-export default function Footer() {
+export default function HomeBottom() {
     return (
-        <Flex backgroundColor="#f9fafb" wrap={"wrap"} padding="8em 0 2em">
+        <Flex backgroundColor="#f9fafb" wrap={"wrap"} padding="5em 0 0">
             <Box width={{ base: "100%", lg: "25%" }} padding="3em">
                 <PlaskemLogo />
                 <Text margin={"1em 0"}>
@@ -46,6 +46,7 @@ export default function Footer() {
                     <a>Pesquisa de satisfação</a>
                 </Text>
             </Box>
+            
         </Flex>
     );
 }

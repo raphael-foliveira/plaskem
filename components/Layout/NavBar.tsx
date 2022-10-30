@@ -1,4 +1,4 @@
-import { ReactNode } from "react";
+import { ReactNode, useEffect, useState } from "react";
 import {
     Box,
     Flex,
@@ -10,29 +10,33 @@ import {
     Stack,
     Button,
 } from "@chakra-ui/react";
+import { useRouter } from "next/router";
 import { HamburgerIcon, CloseIcon } from "@chakra-ui/icons";
 
 import { PlaskemLogo } from "../UI/Assets";
 
-const NavLink = ({ children, href }: { children: ReactNode; href: string }) => (
-    <Link
-        px={2}
-        py={1}
-        rounded={"md"}
-        _hover={{
-            textDecoration: "none",
-            bg: useColorModeValue("gray.200", "gray.700"),
-        }}
-        href={href}
-    >
-        {children}
-    </Link>
-);
-
+const NavLink = ({ children, href }: { children: ReactNode; href: string }) => {
+    const router = useRouter();
+    return (
+        <Link
+            px={2}
+            py={1}
+            rounded={"md"}
+            _hover={{
+                textDecoration: "none",
+                bg: useColorModeValue("gray.200", "gray.700"),
+            }}
+            href={href}
+            variant={href === router.pathname ? "pkmGreenLink" : "pkmDefaultLink"}
+        >
+            {children}
+        </Link>
+    );
+};
 function NavBarLinks() {
     return (
         <>
-            <NavLink key={"home"} href={"/home"}>
+            <NavLink key={"home"} href={"/"}>
                 Home
             </NavLink>
             <NavLink key={"empresa"} href={"/empresa"}>
@@ -59,7 +63,6 @@ export default function NavBar() {
             width="100%"
             filter="drop-shadow(0px 4px 2px rgba(0, 0, 0, 0.03));"
             boxShadow={"0 -100px 200px"}
-            marginBottom={{lg:"10em"}}
         >
             <Flex h={16} alignItems={"center"} justifyContent={"space-between"} height="96px">
                 <IconButton

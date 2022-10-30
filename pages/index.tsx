@@ -1,9 +1,11 @@
 import BaseLayout from "../components/Layout/BaseLayout";
 import MainContent from "../components/HomeComponents/MainContent";
 import InfoCard from "../components/HomeComponents/InfoCard";
-import Bottom from "../components/HomeComponents/Bottom";
+import HomeMiddleContent from "../components/HomeComponents/HomeMiddleContent";
 import HomeContactForm from "../components/HomeComponents/HomeContactForm";
-import Footer from "../components/HomeComponents/Footer";
+import HomeBottom from "../components/HomeComponents/HomeBottom";
+import { Text } from "@chakra-ui/react";
+import { CopyRight } from "../components/UI/Assets";
 
 export default function Home() {
     return (
@@ -11,10 +13,11 @@ export default function Home() {
             <BaseLayout tabTitle="Plaskem">
                 <MainContent />
                 <InfoCard />
-                <Bottom />
+                <HomeMiddleContent />
             </BaseLayout>
             <HomeContactForm />
-            <Footer/>
+            <HomeBottom />
+            <CopyRight/>
         </>
     );
 }
