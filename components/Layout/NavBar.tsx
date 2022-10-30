@@ -59,7 +59,7 @@ export default function NavBar() {
             width="100%"
             filter="drop-shadow(0px 4px 2px rgba(0, 0, 0, 0.03));"
             boxShadow={"0 -100px 200px"}
-            marginBottom="10em"
+            marginBottom={{lg:"10em"}}
         >
             <Flex h={16} alignItems={"center"} justifyContent={"space-between"} height="96px">
                 <IconButton
@@ -68,6 +68,7 @@ export default function NavBar() {
                     aria-label={"Open Menu"}
                     display={{ md: "none" }}
                     onClick={isOpen ? onClose : onOpen}
+                    marginRight="2em"
                 />
                 <Flex
                     marginLeft="1em"
@@ -79,7 +80,7 @@ export default function NavBar() {
                     <HStack as={"nav"} spacing={4} display={{ base: "none", md: "flex" }}>
                         <NavBarLinks />
                     </HStack>
-                    <Flex justifyContent={"flex-end"}>
+                    <Flex justifyContent={"flex-end"} display={{ base: "none", md: "flex" }}>
                         <Button>Fale conosco</Button>
                     </Flex>
                 </Flex>
