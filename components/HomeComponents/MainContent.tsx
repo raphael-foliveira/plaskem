@@ -1,12 +1,6 @@
 import { Heading, Button, Flex, Box } from "@chakra-ui/react";
 import { SquigglyLine } from "../UI/Assets";
 import { Fruits } from "../UI/Assets";
-import styled from "@emotion/styled";
-
-const SpillingFruits = styled.div`
-    position: relative;
-    left: 100px;
-`;
 
 export default function MainContent() {
     return (
