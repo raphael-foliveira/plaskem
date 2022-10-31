@@ -1,6 +1,7 @@
 import { Flex, Wrap } from "@chakra-ui/react";
 import ContactForm from "../../components/Forms/ContactForm";
 import NavBar from "../../components/Layout/NavBar";
+import { CopyRight } from "../../components/UI/Assets";
 
 export default function FaleConosco() {
     return (
@@ -14,6 +15,7 @@ export default function FaleConosco() {
                 height={"1000px"}
             >
                 <ContactForm />
+            <CopyRight/>
             </Flex>
         </>
     );

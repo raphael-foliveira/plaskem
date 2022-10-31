@@ -4,7 +4,7 @@ import { Iso9001Seal } from "../UI/Assets";
 export default function Certification() {
     return (
         <Box textAlign={"end"} fontSize="20" >
-            <Heading>Certificação</Heading>
+            <Heading marginBottom={"2em"}>Certificação</Heading>
             <Flex wrap="wrap">
                 <Flex width={{base: "100%", lg: "50%"}} padding="1em">
                     <Iso9001Seal />

@@ -125,7 +125,7 @@ export function CopyRight() {
     return (
         <Text textAlign={"center"}>
             2022 Ⓒ Designed by Isabella Borges. Built by Raphael Oliveira. Todos os direitos
-            reservados
+            reservados.
         </Text>
     );
 }
