@@ -28,8 +28,8 @@ export function PlaskemLogo() {
     );
 }
 
-export function SquigglyLine({ width = "" }) {
-    return <Image src={squigglyLine.src} alt="" width={width} />;
+export function SquigglyLine({ width = "", height = "" }) {
+    return <Image src={squigglyLine.src} alt="" width={width} height={height} />;
 }
 export function SquigglyCircle() {
     return <Image src={squigglyCircle.src} alt="" />;
@@ -65,10 +65,16 @@ export function Polyethylene({ width = "auto", height = "auto" }) {
     );
 }
 
-export function PlantInHand({width = "auto", height = "auto"}) {
+export function PlantInHand({ width = "auto", height = "auto" }) {
     return (
-        <Image src={plantInHand.src} alt="Mãos segurando uma pequena planta" width={width} height={height} objectFit="contain" />
-    )
+        <Image
+            src={plantInHand.src}
+            alt="Mãos segurando uma pequena planta"
+            width={width}
+            height={height}
+            objectFit="contain"
+        />
+    );
 }
 
 export function Star() {
@@ -83,8 +89,16 @@ export function Lines() {
     return <Image src={lines.src} alt="linhas" height="34" width="auto" />;
 }
 
-export function Iso9001Seal({height="auto", width="auto"}) {
-    return <Image src={iso9001Seal.src} alt="Selo ISO 9001" objectFit={"contain"} height={height} width={width} />
+export function Iso9001Seal({ height = "auto", width = "auto" }) {
+    return (
+        <Image
+            src={iso9001Seal.src}
+            alt="Selo ISO 9001"
+            objectFit={"contain"}
+            height={height}
+            width={width}
+        />
+    );
 }
 
 export function CadastroSincronizado() {

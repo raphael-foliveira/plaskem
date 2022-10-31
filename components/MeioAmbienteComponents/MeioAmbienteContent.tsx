@@ -1,11 +1,25 @@
 import { Heading, Text, Box, Flex } from "@chakra-ui/react";
 import { PlantInHand } from "../UI/Assets";
+import squigglyCloud from "../../public/drawings/squigglyCloud.png";
 
 export default function MeioAmbienteContent() {
     return (
         <Flex wrap="wrap" fontSize={"20px"} marginBottom={"6em"}>
-            <Box width={{ base: "100%", lg: "50%" }} padding={{base:"1em 0",lg:"0 10em 0 0"}}>
-                <Heading marginBottom="1.5em">Meio Ambiente</Heading>
+            <Box width={{ base: "100%", lg: "50%" }} padding={{ base: "1em 0", lg: "0 5em 0 0" }}>
+                <Box
+                    paddingTop={"2em"}
+                    paddingBottom={{base:"2em",lg: "4em"}}
+                    paddingLeft={{lg: "4em"}}
+                    backgroundImage={{ lg: squigglyCloud.src }}
+                    backgroundPosition={"0% 0%"}
+                    backgroundRepeat={"no-repeat"}
+                    backgroundSize={"150px auto"}
+                    position={{ lg: "relative" }}
+                    right={{lg: "4em"}}
+                    width="100%"
+                >
+                    <Heading>Meio Ambiente</Heading>
+                </Box>
                 <Text>
                     A Plaskem vem cumprindo o seu papel ao longo dos anos, recuperando as embalagens
                     não conformes em sua totalidade, em parceria com a Ecopel.

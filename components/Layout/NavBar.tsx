@@ -69,7 +69,7 @@ export default function NavBar() {
                     size={"md"}
                     icon={isOpen ? <CloseIcon /> : <HamburgerIcon />}
                     aria-label={"Open Menu"}
-                    display={{ md: "none" }}
+                    display={{ lg: "none" }}
                     onClick={isOpen ? onClose : onOpen}
                     marginRight="2em"
                 />
@@ -80,17 +80,19 @@ export default function NavBar() {
                     justifyContent="space-between"
                 >
                     <PlaskemLogo />
-                    <HStack as={"nav"} spacing={4} display={{ base: "none", md: "flex" }}>
+                    <HStack as={"nav"} spacing={4} display={{ base: "none", lg: "flex" }}>
                         <NavBarLinks />
                     </HStack>
-                    <Flex justifyContent={"flex-end"} display={{ base: "none", md: "flex" }}>
-                        <Button>Fale conosco</Button>
+                    <Flex justifyContent={"flex-end"} display={{ base: "none", lg: "flex" }}>
+                        <Link href={"/fale-conosco"}>
+                            <Button>Fale conosco</Button>
+                        </Link>
                     </Flex>
                 </Flex>
             </Flex>
 
             {isOpen ? (
-                <Box pb={4} display={{ md: "none" }}>
+                <Box pb={4} display={{ lg: "none" }}>
                     <Stack as={"nav"} spacing={4}>
                         <NavBarLinks />
                     </Stack>
