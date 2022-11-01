@@ -19,7 +19,7 @@ const NavLink = ({ children, href }: { children: ReactNode; href: string }) => {
     const router = useRouter();
     return (
         <Link
-            px={2}
+            px={3}
             py={1}
             rounded={"md"}
             _hover={{
@@ -28,7 +28,7 @@ const NavLink = ({ children, href }: { children: ReactNode; href: string }) => {
             }}
             href={href}
             variant={href === router.pathname ? "pkmGreenLink" : "pkmDefaultLink"}
-            fontWeight={href === router.pathname && href === "/" ? "extrabold" : "normal"}
+            fontWeight={href === router.pathname ? "extrabold" : "normal"}
         >
             {children}
         </Link>
