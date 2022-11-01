@@ -13,7 +13,7 @@ export default function HomeBottom() {
                     <a>(71) 3186-0399</a>
                 </Text>
             </Box>
-            <Flex width={{ base: "100%", lg: "25%" }} justifyContent="center" alignItems={"center"}>
+            <Flex width={{ base: "100%", lg: "30%" }} justifyContent="center" alignItems={"center"} padding="3em">
                 <iframe
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3889.070125752584!2d-38.3373800846589!3d-12.903212290900761!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x716163f267fa54d%3A0x82da6a19b652748f!2sPlaskem%20Embalagens!5e0!3m2!1sen!2sbr!4v1667103629110!5m2!1sen!2sbr"
                     width="600"
@@ -21,26 +21,26 @@ export default function HomeBottom() {
                     loading="lazy"
                 ></iframe>
             </Flex>
-            <Box width={{ base: "100%", lg: "25%" }} textAlign="center" paddingTop="2em">
+            <Box width={{ base: "100%", lg: "20%" }} textAlign="center" padding="3em" lineHeight={"2em"}> 
                 <Text>
-                    <a>Sobre nós</a>
+                    <a href="/empresa">Sobre nós</a>
                 </Text>
                 <Text>
-                    <a>Política de qualidade</a>
+                    <a href="/politica-de-qualidade">Política de qualidade</a>
                 </Text>
                 <Text>
-                    <a>Nossos produtos</a>
+                    <a href="/produtos">Nossos produtos</a>
                 </Text>
                 <Text>
-                    <a>Meio ambiente</a>
+                    <a href="/meio-ambiente">Meio ambiente</a>
                 </Text>
             </Box>
-            <Box width={{ base: "100%", lg: "25%" }} textAlign="center" paddingTop="2em">
+            <Box width={{ base: "100%", lg: "20%" }} textAlign="center" padding="3em" lineHeight={"2em"}>
                 <Text>
                     <a>Trabalhe conosco</a>
                 </Text>
                 <Text>
-                    <a>Contato</a>
+                    <a href="/fale-conosco">Contato</a>
                 </Text>
                 <Text>
                     <a>Pesquisa de satisfação</a>
