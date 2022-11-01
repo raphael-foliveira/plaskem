@@ -45,7 +45,6 @@ function NavBarLinks() {
             <NavLink key={"politica-de-qualidade"} href={"/politica-de-qualidade"}>
                 Política de qualidade
             </NavLink>
-            <Box w={20} />
             <NavLink key={"meio-ambiente"} href={"/meio-ambiente"}>
                 Meio Ambiente
             </NavLink>
@@ -79,7 +78,9 @@ export default function NavBar() {
                     alignItems={"center"}
                     justifyContent="space-between"
                 >
-                    <PlaskemLogo />
+                    <Link href="/">
+                        <PlaskemLogo />
+                    </Link>
                     <HStack as={"nav"} spacing={4} display={{ base: "none", lg: "flex" }}>
                         <NavBarLinks />
                     </HStack>
