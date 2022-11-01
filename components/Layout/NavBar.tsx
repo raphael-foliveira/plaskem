@@ -28,6 +28,7 @@ const NavLink = ({ children, href }: { children: ReactNode; href: string }) => {
             }}
             href={href}
             variant={href === router.pathname ? "pkmGreenLink" : "pkmDefaultLink"}
+            fontWeight={href === router.pathname && href === "/" ? "extrabold" : "normal"}
         >
             {children}
         </Link>
