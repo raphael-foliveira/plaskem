@@ -7,8 +7,8 @@ export default function MeioAmbiente() {
         <>
             <BaseLayout tabTitle="Meio Ambiente">
                 <MeioAmbienteContent />
-                <CopyRight />
             </BaseLayout>
+            <CopyRight />
         </>
     );
 }

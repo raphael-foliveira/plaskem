@@ -4,7 +4,7 @@ import {
     defineStyle,
     createMultiStyleConfigHelpers,
 } from "@chakra-ui/react";
-import { inputAnatomy } from "@chakra-ui/anatomy";
+import { inputAnatomy, selectAnatomy } from "@chakra-ui/anatomy";
 
 const colors = {
     pkmGreen: {
@@ -57,17 +57,15 @@ const textareaTheme = defineStyleConfig({
     },
 });
 
-const { definePartsStyle, defineMultiStyleConfig } = createMultiStyleConfigHelpers(
-    inputAnatomy.keys
-);
+const inputConfigHelpers = createMultiStyleConfigHelpers(inputAnatomy.keys);
 
-const pkmDefaultInput = definePartsStyle({
+const pkmDefaultInput = inputConfigHelpers.definePartsStyle({
     field: {
         outlineColor: "pkmGreen.900",
     },
 });
 
-const inputTheme = defineMultiStyleConfig({
+const inputTheme = inputConfigHelpers.defineMultiStyleConfig({
     variants: {
         pkmDefaultInput: pkmDefaultInput,
     },
@@ -76,23 +74,39 @@ const inputTheme = defineMultiStyleConfig({
     },
 });
 
+const selectConfigHelpers = createMultiStyleConfigHelpers(selectAnatomy.keys);
+
+const pkmDefaultSelect = selectConfigHelpers.definePartsStyle({
+    field: {
+        outlineColor: "pkmGreen.900",
+    },
+});
+
+const selectTheme = selectConfigHelpers.defineMultiStyleConfig({
+    variants: {
+        pkmDefaultSelect: pkmDefaultSelect,
+    },
+    defaultProps: {
+        variant: "pkmDefaultSelect",
+    },
+});
+
 const pkmGreenLink = defineStyle({
     color: "pkmGreen.400",
 });
 
 const pkmDefaultLink = defineStyle({
-    color: "pkmBlack.400"
-})
+    color: "pkmBlack.400",
+});
 
 const linkTheme = defineStyleConfig({
     variants: {
         pkmGreenLink: pkmGreenLink,
-        pkmDefaultLink: pkmDefaultLink
+        pkmDefaultLink: pkmDefaultLink,
     },
     defaultProps: {
-        variant: "pkmDefaultLink"
-    }
-
+        variant: "pkmDefaultLink",
+    },
 });
 
 const theme = extendTheme({
@@ -103,6 +117,7 @@ const theme = extendTheme({
         Heading: headingTheme,
         Textarea: textareaTheme,
         Link: linkTheme,
+        Select: selectTheme,
     },
 });
 

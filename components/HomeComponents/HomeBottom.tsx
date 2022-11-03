@@ -31,7 +31,7 @@ export default function HomeBottom() {
                 width={{ base: "100%", lg: "20%" }}
                 textAlign="center"
                 padding="3em"
-                lineHeight={"2em"}
+                lineHeight={"2.5em"}
             >
                 <Text>
                     <Link href="/empresa">Sobre nós</Link>
@@ -50,13 +50,15 @@ export default function HomeBottom() {
                 width={{ base: "100%", lg: "20%" }}
                 textAlign="center"
                 padding="3em"
-                lineHeight={"2em"}
+                lineHeight={"2.5em"}
             >
                 <Text>Trabalhe conosco</Text>
                 <Text>
                     <Link href="/fale-conosco">Contato</Link>
                 </Text>
-                <Text>Pesquisa de satisfação</Text>
+                <Text>
+                    <Link href="/pesquisa-de-satisfacao">Pesquisa de satisfação</Link>
+                </Text>
             </Box>
         </Flex>
     );

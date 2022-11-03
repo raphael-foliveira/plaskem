@@ -8,12 +8,12 @@ export default function MainText() {
             <Flex wrap="wrap">
                 <Box
                     width={{ base: "100%", lg: "50%" }}
-                    padding={"2.5em 2em 4em"}
+                    padding={"2.5em 2.5em 4em"}
                     backgroundImage={squigglyCircle.src}
                     backgroundRepeat={"no-repeat"}
                     backgroundSize={"250px auto"}
                     position="relative"
-                    right={"2em"}
+                    right={"2.5em"}
                 >
                     <Heading as="h1">A empresa</Heading>
                 </Box>

@@ -3,13 +3,18 @@ import { Iso9001Seal } from "../UI/Assets";
 
 export default function Certification() {
     return (
-        <Box textAlign={"end"} fontSize="20" >
+        <Box textAlign={"end"} fontSize="20">
             <Heading marginBottom={"2em"}>Certificação</Heading>
             <Flex wrap="wrap">
-                <Flex width={{base: "100%", lg: "50%"}} padding="1em">
+                <Flex
+                    width={{ base: "100%", lg: "50%" }}
+                    padding="2em"
+                    position={"relative"}
+                    bottom={{ base: "2em", lg: "4em" }}
+                >
                     <Iso9001Seal />
                 </Flex>
-                <Box width={{base: "100%", lg: "50%"}}>
+                <Box width={{ base: "100%", lg: "50%" }}>
                     <Text>
                         É com muito orgulho e satisfação que anunciamos oficialmente que SOMOS UMA
                         EMPRESA CERTIFICADA PELA ISO9001.15!

@@ -1,9 +1,9 @@
-import { Flex, Wrap } from "@chakra-ui/react";
-import ContactForm from "../../components/Forms/ContactForm";
+import { Flex } from "@chakra-ui/react";
+import PesquisaDeSatisfacaoForm from "../../components/Forms/PesquisaDeSatisfacaoForm";
 import NavBar from "../../components/Layout/NavBar";
 import { CopyRight } from "../../components/UI/Assets";
 
-export default function FaleConosco() {
+export default function PesquisaDeSatisfacao() {
     return (
         <>
             <NavBar />
@@ -14,9 +14,9 @@ export default function FaleConosco() {
                 paddingTop="5em"
                 height={"1000px"}
             >
-                <ContactForm />
-            </Flex>
+                <PesquisaDeSatisfacaoForm />
             <CopyRight/>
+            </Flex>
         </>
-    );
+    )
 }

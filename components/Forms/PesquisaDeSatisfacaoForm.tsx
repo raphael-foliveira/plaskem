@@ -9,21 +9,22 @@ import {
     Button,
     Box,
     Text,
+    Select,
 } from "@chakra-ui/react";
 
-export default function ContactForm() {
+export default function PesquisaDeSatisfacaoForm() {
     return (
         <>
             <Box width={{ base: "10%", md: "40%" }} />
             <Stack textAlign={"end"} width={{ base: "100%" }} gap={3} padding="1.5em">
                 <Box textAlign={"left"} marginLeft={{ lg: "30%" }} width={{ lg: "40%" }}>
-                    <Heading marginBottom={4}>Entre em contato com a gente</Heading>
-                    <Text marginBottom={6}>
-                        Para saber mais sobre os nossos produtos, deixe uma mensagem que entraremos
-                        em contato com você!
+                    <Heading marginBottom={4} textAlign="center">
+                        Pesquisa de satisfação
+                    </Heading>
+                    <Text marginBottom={6} textAlign="center">
+                        Nesse espaço você pode nos contar sobre sua satisfação com o nosso produto.
                     </Text>
                 </Box>
-
                 <InputGroup>
                     <Flex width={{ base: "25%", lg: "30%" }} justifyContent="flex-end">
                         <FormLabel>Nome</FormLabel>
@@ -41,6 +42,22 @@ export default function ContactForm() {
                         <FormLabel>DDD + Telefone</FormLabel>
                     </Flex>
                     <Input name="phone" width={{ base: "75%", lg: "40%" }} />
+                </InputGroup>
+                <InputGroup>
+                    <Flex width={{ base: "25%", lg: "30%" }} justifyContent="flex-end">
+                        <FormLabel>Nível de satisfação</FormLabel>
+                    </Flex>
+                    <Select
+                        name="evaluation"
+                        width={{ base: "75%", lg: "40%" }}
+                        placeholder="Selecione uma opção"
+                    >
+                        <option value="Muito satisfeito">Muito satisfeito</option>
+                        <option value="Satisfeito">Satisfeito</option>
+                        <option value="Bom">Bom</option>
+                        <option value="Regular">Regular</option>
+                        <option value="Ruim">Ruim</option>
+                    </Select>
                 </InputGroup>
                 <InputGroup>
                     <Flex width={{ base: "25%", lg: "30%" }} justifyContent="flex-end">
