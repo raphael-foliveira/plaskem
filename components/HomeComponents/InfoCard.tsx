@@ -11,7 +11,7 @@ function InfoItem({ children }: { children: ReactNode }) {
     );
 }
 
-export default function () {
+export default function InfoCard() {
     return (
         <Flex backgroundColor="#f9fafb" marginTop="84px" borderRadius="30px" wrap={"wrap"} width="100%">
             <InfoItem>

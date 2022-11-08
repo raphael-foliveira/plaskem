@@ -3,7 +3,7 @@ import {
 } from "@chakra-ui/react";
 import ContactForm from "../Forms/ContactForm";
 
-export default function () {
+export default function HomeContactForm() {
     return (
         <Flex backgroundColor="#f9fafb" width={"100%"} wrap="wrap" paddingTop="5em">
             <ContactForm /> 

@@ -1,4 +1,4 @@
-import { ReactNode } from "react";
+import { ReactNode, useEffect, useState } from "react";
 import {
     Box,
     Flex,
@@ -17,6 +17,16 @@ import { PlaskemLogo } from "../UI/Assets";
 
 const NavLink = ({ children, href }: { children: ReactNode; href: string }) => {
     const router = useRouter();
+    const [textColor, setTextColor] = useState("black");
+    const [fontWeight, setFontWeight] = useState("normal");
+
+    useEffect(() => {
+        if (href === router.pathname) {
+            setTextColor("pkmGreen.400");
+            setFontWeight("extrabold")
+        }
+    }, [])
+
     return (
         <Link href={href}>
             <Button
@@ -29,9 +39,8 @@ const NavLink = ({ children, href }: { children: ReactNode; href: string }) => {
                 _focus={{
                     bg: useColorModeValue("gray.200", "gray.700"),
                 }}
-                // textColor="black"
-                textColor={href === router.pathname ? "pkmGreen.400" : "black"}
-                fontWeight={href === router.pathname ? "extrabold" : "normal"}
+                textColor={textColor}
+                fontWeight={fontWeight}
             >
                 {children}
             </Button>
@@ -41,23 +50,23 @@ const NavLink = ({ children, href }: { children: ReactNode; href: string }) => {
 function NavBarLinks() {
     return (
         <>
-            <NavLink key={"home"} href={"/"}>
+            <NavLink href={"/"}>
                 Home
             </NavLink>
-            <NavLink key={"empresa"} href={"/empresa"}>
+            <NavLink href={"/empresa"}>
                 Empresa
             </NavLink>
-            <NavLink key={"politica-de-qualidade"} href={"/politica-de-qualidade"}>
+            <NavLink href={"/politica-de-qualidade"}>
                 Política de qualidade
             </NavLink>
-            <NavLink key={"meio-ambiente"} href={"/meio-ambiente"}>
+            <NavLink href={"/meio-ambiente"}>
                 Meio Ambiente
             </NavLink>
         </>
     );
 }
 
-export default function () {
+export default function NavBar() {
     const { isOpen, onOpen, onClose } = useDisclosure();
 
     return (
@@ -66,7 +75,7 @@ export default function () {
             px={4}
             width="100%"
             filter="drop-shadow(0px 4px 2px rgba(0, 0, 0, 0.03));"
-            boxShadow={"0 -100px 200px"}
+            boxShadow={"0 -50px 100px"}
         >
             <Flex h={16} alignItems={"center"} justifyContent={"space-between"} height="96px">
                 <IconButton
@@ -79,18 +88,18 @@ export default function () {
                 />
                 <Flex width="100%" alignItems={"center"} justifyContent="space-between">
                     <Box marginLeft={"1em"}>
-                        <ChakraLink href="/">
+                        <Link href="/">
                             <PlaskemLogo />
-                        </ChakraLink>
+                        </Link>
                     </Box>
-                    <HStack
-                        spacing={4}
+                    <Flex
+                    gap={8}
                         display={{ base: "none", lg: "flex" }}
                         width="100%"
                         justifyContent={"center"}
                     >
                         <NavBarLinks />
-                    </HStack>
+                    </Flex>
                     <Flex justifyContent={"flex-end"} display={{ base: "none", lg: "flex" }}>
                         <Link href={"/fale-conosco"}>
                             <Button>Fale conosco</Button>

@@ -2,7 +2,7 @@ import { Box, Flex, Text } from "@chakra-ui/react";
 import Link from "next/link";
 import { PlaskemLogo } from "../UI/Assets";
 
-export default function () {
+export default function HomeBottom() {
     return (
         <Flex backgroundColor="#f9fafb" wrap={"wrap"} padding="5em 0 0">
             <Box width={{ base: "100%", lg: "25%" }} padding="3em">

@@ -1,7 +1,7 @@
 import { Heading, Text, Flex, Box, UnorderedList, ListItem } from "@chakra-ui/react";
 import { Polyethylene, SquigglyLine } from "../UI/Assets";
 
-export default function () {
+export default function MainContent() {
     return (
         <Box marginBottom={"2em"}>
             <Flex wrap={"wrap"}>

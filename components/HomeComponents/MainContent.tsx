@@ -4,7 +4,7 @@ import { SquigglyLine } from "../UI/Assets";
 import { Fruits } from "../UI/Assets";
 import smile from "../../public/drawings/smile.png";
 
-export default function () {
+export default function MainContent() {
     return (
         <Flex wrap={"wrap"} justifyContent="space-between" marginTop={{ lg: "4em" }}>
             <Flex

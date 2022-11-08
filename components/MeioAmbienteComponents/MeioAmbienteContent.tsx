@@ -2,7 +2,7 @@ import { Heading, Text, Box, Flex } from "@chakra-ui/react";
 import { PlantInHand } from "../UI/Assets";
 import squigglyCloud from "../../public/drawings/squigglyCloud.png";
 
-export default function () {
+export default function MeioAmbienteContent() {
     return (
         <Flex wrap="wrap" fontSize={"20px"} marginBottom={"6em"}>
             <Box width={{ base: "100%", lg: "50%" }} padding={{ base: "1em 0", lg: "0 5em 0 0" }}>
