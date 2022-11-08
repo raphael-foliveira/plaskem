@@ -8,7 +8,7 @@ interface BaseLayoutProps {
     children: ReactNode;
 }
 
-export default function BaseLayout({ tabTitle="Plaskem", children }: BaseLayoutProps) {
+export default function ({ tabTitle="Plaskem", children }: BaseLayoutProps) {
     return (
         <>
             <Head>

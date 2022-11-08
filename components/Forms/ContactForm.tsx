@@ -13,7 +13,7 @@ import {
 } from "@chakra-ui/react";
 import { FormEvent } from "react";
 
-export default function ContactForm() {
+export default function () {
     const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
         event.preventDefault();
     };

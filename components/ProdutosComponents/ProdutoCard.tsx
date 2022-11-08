@@ -1,7 +1,7 @@
 import { Box, Heading, Text } from "@chakra-ui/react";
 import { ReactNode } from "react";
 
-export default function ProdutoCard({ title, children }: { title: string; children: ReactNode }) {
+export default function ({ title, children }: { title: string; children: ReactNode }) {
     return (
         <Box
             backgroundColor={"rgba(190,255,169,0.28)"}

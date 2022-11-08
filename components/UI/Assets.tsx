@@ -13,7 +13,7 @@ import polyethylene from "../../public/pictures/polyethylene.png";
 import squigglyArrow from "../../public/drawings/squigglyArrow.png";
 import iso9001Seal from "../../public/certificates/iso9001Seal.png";
 import plantInHand from "../../public/pictures/plantInHand.png";
-import { Image, Text } from "@chakra-ui/react";
+import { Image, Text, Box } from "@chakra-ui/react";
 
 export function PlaskemLogo() {
     return (
@@ -82,7 +82,15 @@ export function Star() {
 }
 
 export function Extruder() {
-    return <Image src={extruder.src} alt="extrusora" height="auto" width="585px" />;
+    return (
+        <Image
+            src={extruder.src}
+            alt="extrusora"
+            height="auto"
+            width="auto"
+            minWidth={{ lg: "585px" }}
+        />
+    );
 }
 
 export function Lines() {
@@ -123,9 +131,11 @@ export function Sintegra() {
 
 export function CopyRight() {
     return (
-        <Text textAlign={"center"}>
-            2022 Ⓒ Designed by Isabella Borges. Built by Raphael Oliveira. Todos os direitos
-            reservados.
-        </Text>
+        <Box padding="1em 1em 0 1em">
+            <Text textAlign={"center"} fontSize={"xs"}>
+                2022 Ⓒ Designed by Isabella Borges. Built by Raphael Oliveira. Todos os direitos
+                reservados.
+            </Text>
+        </Box>
     );
 }

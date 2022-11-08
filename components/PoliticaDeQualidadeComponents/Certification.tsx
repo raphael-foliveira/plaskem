@@ -1,7 +1,7 @@
 import { Heading, Text, Flex, Box } from "@chakra-ui/react";
 import { Iso9001Seal } from "../UI/Assets";
 
-export default function Certification() {
+export default function () {
     return (
         <Box textAlign={"end"} fontSize="20">
             <Heading marginBottom={"2em"}>Certificação</Heading>

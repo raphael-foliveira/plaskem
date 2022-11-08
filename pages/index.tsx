@@ -4,7 +4,6 @@ import InfoCard from "../components/HomeComponents/InfoCard";
 import HomeMiddleContent from "../components/HomeComponents/HomeMiddleContent";
 import HomeContactForm from "../components/HomeComponents/HomeContactForm";
 import HomeBottom from "../components/HomeComponents/HomeBottom";
-import { Text } from "@chakra-ui/react";
 import { CopyRight } from "../components/UI/Assets";
 
 export default function Home() {

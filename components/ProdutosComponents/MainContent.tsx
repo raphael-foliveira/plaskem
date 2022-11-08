@@ -1,7 +1,7 @@
 import { Flex, Heading, Text } from "@chakra-ui/react";
 import ProdutoCard from "./ProdutoCard";
 
-export default function MainContent() {
+export default function () {
     return (
         <>
             <Heading marginBottom={"2em"}>Nossos produtos</Heading>

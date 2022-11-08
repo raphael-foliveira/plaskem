@@ -2,7 +2,7 @@ import { Box, Flex, Heading, Text } from "@chakra-ui/react";
 import squigglyCircle from "../../public/drawings/squigglyCircle.png";
 import { SquigglyArrow } from "../UI/Assets";
 
-export default function MainText() {
+export default function () {
     return (
         <>
             <Flex wrap="wrap">

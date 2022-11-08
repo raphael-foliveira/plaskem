@@ -1,7 +1,7 @@
 import { Heading, Flex } from "@chakra-ui/react";
 import { Sefaz, Simples, Sintegra, CadastroSincronizado } from "../UI/Assets";
 
-export default function CompanyStatus() {
+export default function () {
     return (
         <>
             <Heading margin={"2em 0 3em"}>Situação da empresa</Heading>

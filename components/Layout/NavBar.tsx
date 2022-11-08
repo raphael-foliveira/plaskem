@@ -3,34 +3,38 @@ import {
     Box,
     Flex,
     HStack,
-    Link,
     IconButton,
     useDisclosure,
     useColorModeValue,
+    Link as ChakraLink,
     Stack,
     Button,
 } from "@chakra-ui/react";
+import Link from "next/link";
 import { useRouter } from "next/router";
 import { HamburgerIcon, CloseIcon } from "@chakra-ui/icons";
-
 import { PlaskemLogo } from "../UI/Assets";
 
 const NavLink = ({ children, href }: { children: ReactNode; href: string }) => {
     const router = useRouter();
     return (
-        <Link
-            px={3}
-            py={1}
-            rounded={"md"}
-            _hover={{
-                textDecoration: "none",
-                bg: useColorModeValue("gray.200", "gray.700"),
-            }}
-            href={href}
-            variant={href === router.pathname ? "pkmGreenLink" : "pkmDefaultLink"}
-            fontWeight={href === router.pathname ? "extrabold" : "normal"}
-        >
-            {children}
+        <Link href={href}>
+            <Button
+                rounded={"md"}
+                backgroundColor="transparent"
+                _hover={{
+                    textDecoration: "none",
+                    bg: useColorModeValue("gray.200", "gray.700"),
+                }}
+                _focus={{
+                    bg: useColorModeValue("gray.200", "gray.700"),
+                }}
+                // textColor="black"
+                textColor={href === router.pathname ? "pkmGreen.400" : "black"}
+                fontWeight={href === router.pathname ? "extrabold" : "normal"}
+            >
+                {children}
+            </Button>
         </Link>
     );
 };
@@ -53,7 +57,7 @@ function NavBarLinks() {
     );
 }
 
-export default function NavBar() {
+export default function () {
     const { isOpen, onOpen, onClose } = useDisclosure();
 
     return (
@@ -73,16 +77,18 @@ export default function NavBar() {
                     onClick={isOpen ? onClose : onOpen}
                     marginRight="2em"
                 />
-                <Flex
-                    marginLeft="1em"
-                    width="100%"
-                    alignItems={"center"}
-                    justifyContent="space-between"
-                >
-                    <Link href="/">
-                        <PlaskemLogo />
-                    </Link>
-                    <HStack as={"nav"} spacing={4} display={{ base: "none", lg: "flex" }}>
+                <Flex width="100%" alignItems={"center"} justifyContent="space-between">
+                    <Box marginLeft={"1em"}>
+                        <ChakraLink href="/">
+                            <PlaskemLogo />
+                        </ChakraLink>
+                    </Box>
+                    <HStack
+                        spacing={4}
+                        display={{ base: "none", lg: "flex" }}
+                        width="100%"
+                        justifyContent={"center"}
+                    >
                         <NavBarLinks />
                     </HStack>
                     <Flex justifyContent={"flex-end"} display={{ base: "none", lg: "flex" }}>
