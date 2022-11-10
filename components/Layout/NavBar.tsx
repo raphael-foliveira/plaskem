@@ -14,6 +14,12 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 import { HamburgerIcon, CloseIcon } from "@chakra-ui/icons";
 import { PlaskemLogo } from "../UI/Assets";
+import { m } from "framer-motion";
+
+type LinkElementInfo = {
+    name: string;
+    href: string;
+};
 
 const NavLink = ({ children, href }: { children: ReactNode; href: string }) => {
     const router = useRouter();
@@ -23,9 +29,9 @@ const NavLink = ({ children, href }: { children: ReactNode; href: string }) => {
     useEffect(() => {
         if (href === router.pathname) {
             setTextColor("pkmGreen.400");
-            setFontWeight("extrabold")
+            setFontWeight("extrabold");
         }
-    }, [])
+    }, []);
 
     return (
         <Link href={href}>
@@ -48,20 +54,33 @@ const NavLink = ({ children, href }: { children: ReactNode; href: string }) => {
     );
 };
 function NavBarLinks() {
+    const linkElements: LinkElementInfo[] = [
+        {
+            name: "Home",
+            href: "/",
+        },
+        {
+            name: "Empresa",
+            href: "/empresa",
+        },
+        {
+            name: "Política de qualidade",
+            href: "/politica-de-qualidade",
+        },
+        {
+            name: "Meio Ambiente",
+            href: "/meio-ambiente",
+        },
+    ];
     return (
         <>
-            <NavLink href={"/"}>
-                Home
-            </NavLink>
-            <NavLink href={"/empresa"}>
-                Empresa
-            </NavLink>
-            <NavLink href={"/politica-de-qualidade"}>
-                Política de qualidade
-            </NavLink>
-            <NavLink href={"/meio-ambiente"}>
-                Meio Ambiente
-            </NavLink>
+            {linkElements.map((element) => {
+                return (
+                    <Box width={"200px"} textAlign="center">
+                        <NavLink href={element.href}>{element.name}</NavLink>
+                    </Box>
+                );
+            })}
         </>
     );
 }
@@ -93,7 +112,7 @@ export default function NavBar() {
                         </Link>
                     </Box>
                     <Flex
-                    gap={8}
+                        gap={8}
                         display={{ base: "none", lg: "flex" }}
                         width="100%"
                         justifyContent={"center"}
