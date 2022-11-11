@@ -76,7 +76,7 @@ function NavBarLinks() {
         <>
             {linkElements.map((element) => {
                 return (
-                    <Box width={"200px"} textAlign="center">
+                    <Box width={"200px"} textAlign="center" key={element.name}>
                         <NavLink href={element.href}>{element.name}</NavLink>
                     </Box>
                 );
